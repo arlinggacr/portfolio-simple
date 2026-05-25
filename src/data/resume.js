@@ -8,17 +8,18 @@ export const NAV = [
 export const SKILLS = [
   {
     cat: "Languages",
-    items: ["TypeScript", "JavaScript", "Go", "C#", "Java", "Rust", "Python"],
+    items: ["TypeScript", "JavaScript", "Go", "C#", "Java", "Python", "Rust"],
   },
   {
     cat: "Frameworks",
     items: [
-      "NestJS",
       "ASP.NET Core",
+      "NestJS",
+      "Express.js",
       "Spring Boot",
       "Fiber",
-      "Express.js",
-      "Django",
+      "FastAPI",
+      "Axum & Tokio Environment",
     ],
   },
   { cat: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
@@ -36,7 +37,15 @@ export const EXPERIENCE = [
     title: "Backend Engineer",
     company: "PT. Neural Technologies Indonesia",
     desc: "Led backend architecture for Phase 2 of the Benchmark Solution Service — APIs powering Ookla & OpenSignal dashboards, Executive Dashboard, and Activity Tracker across 30+ regions. Built CEI Outlook backend from scratch with Keycloak + Elasticsearch. Mentored 4 interns.",
-    stack: ["NestJS", "TypeScript", "Keycloak", "Elasticsearch", "GCP"],
+    stack: [
+      "ASP.NET Core",
+      "NestJS",
+      "C#",
+      "TypeScript",
+      "Keycloak",
+      "Elasticsearch",
+      "On Premise Servers",
+    ],
   },
   {
     period: "Nov 2025\nMar 2026",
@@ -44,7 +53,14 @@ export const EXPERIENCE = [
     title: "Backend Engineer",
     company: "PT. Partner Transformasi Informatika",
     desc: "Spearheaded backend for Selatour, an Umrah travel platform. Built scalable APIs for admin management and mobile app. Delivered MVP in 2 months.",
-    stack: ["NestJS", "Bun", "TypeScript", "Supabase", "PostgreSQL"],
+    stack: [
+      "NestJS",
+      "Bun",
+      "TypeScript",
+      "Supabase",
+      "Firebase",
+      "PostgreSQL",
+    ],
   },
   {
     period: "Oct 2023\nDec 2023",
@@ -52,15 +68,25 @@ export const EXPERIENCE = [
     title: "Backend Engineer",
     company: "PT. Inti Teknologi Bersama",
     desc: "Built core backend and database for blimobil.id, a vehicle trading and spare parts marketplace. Completed majority of MVP within 2 months.",
-    stack: ["NestJS", "TypeScript", "PostgreSQL"],
+    stack: ["NestJS", "TypeScript", "Digital Ocean", "Firebase", "PostgreSQL"],
   },
   {
     period: "Jul 2022\nOct 2023",
     type: "Full-time",
     title: "Backend Engineer",
     company: "KMPlus Consulting",
-    desc: "Orchestrated monolith-to-microservices migration. Owned backend for a talent & learning platform with 2,000+ users. Built a Spotlight-like Search Engine Service.",
-    stack: ["NestJS", "TypeScript", "Microservices", "PostgreSQL"],
+    desc: "Orchestrated monolith-to-macroservices migration. Owned backend for a talent & learning platform with 2,000+ users. Built a Spotlight-like Search Engine Service.",
+    stack: [
+      "NestJS",
+      "Express.js",
+      "Javascript",
+      "TypeScript",
+      "Macroservices",
+      "Redis",
+      "Digital Ocean",
+      "Firebase",
+      "PostgreSQL",
+    ],
   },
   {
     period: "Apr 2022\nJul 2022",
@@ -68,7 +94,7 @@ export const EXPERIENCE = [
     title: "Backend Engineer Intern",
     company: "KMPlus Consulting",
     desc: "Developed Repository Services and redesigned database schema for KMS Applications, improving media management and query performance.",
-    stack: ["Node.js", "PostgreSQL"],
+    stack: ["Express.js", "Javascript", "TypeScript", "Node.js", "PostgreSQL"],
   },
 ];
 

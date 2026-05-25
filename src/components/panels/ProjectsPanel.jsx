@@ -1,4 +1,4 @@
-import { PROJECTS } from "../../data/resume";
+import { PROJECTS } from '../../data/resume'
 
 export default function ProjectsPanel() {
   return (
@@ -11,14 +11,12 @@ export default function ProjectsPanel() {
             <div className="proj-desc">{p.desc}</div>
             <div className="proj-stack">
               {p.stack.map((s) => (
-                <span className="sp" key={s}>
-                  {s}
-                </span>
+                <span className="sp" key={s}>{s}</span>
               ))}
             </div>
           </div>
         ))}
       </div>
     </div>
-  );
+  )
 }

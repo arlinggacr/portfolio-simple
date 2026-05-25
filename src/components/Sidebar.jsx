@@ -11,7 +11,7 @@ export default function Sidebar({ active, setActive, theme, onToggleTheme }) {
           <br />
           Ramdhana
         </div>
-        <div className="sidebar-role">backend_engineer.godev</div>
+        <div className="sidebar-role">backend_engineer</div>
       </div>
 
       <ul className="sidebar-nav">

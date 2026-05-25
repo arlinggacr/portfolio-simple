@@ -1,4 +1,4 @@
-import { EXPERIENCE } from "../../data/resume";
+import { EXPERIENCE } from '../../data/resume'
 
 export default function ExperiencePanel() {
   return (
@@ -17,9 +17,7 @@ export default function ExperiencePanel() {
               <div className="tl-desc">{e.desc}</div>
               <div className="tl-stack">
                 {e.stack.map((s) => (
-                  <span className="sp" key={s}>
-                    {s}
-                  </span>
+                  <span className="sp" key={s}>{s}</span>
                 ))}
               </div>
             </div>
@@ -27,5 +25,5 @@ export default function ExperiencePanel() {
         ))}
       </div>
     </div>
-  );
+  )
 }
