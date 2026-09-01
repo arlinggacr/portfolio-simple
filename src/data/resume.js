@@ -34,17 +34,18 @@ export const EXPERIENCE = [
   {
     period: "Nov 2023\nPresent",
     type: "Full-time",
+    current: true,
     title: "Backend Engineer",
     company: "PT. Neural Technologies Indonesia",
-    desc: "Led backend architecture for Phase 2 of the Benchmark Solution Service — APIs powering Ookla & OpenSignal dashboards, Executive Dashboard, and Activity Tracker across 30+ regions. Built CEI Outlook backend from scratch with Keycloak + Elasticsearch. Mentored 4 interns.",
+    desc: "Led backend architecture for Phase 2 of the Benchmark Solution Service, managing 2 backend engineers and mentoring 4 interns. Built APIs for Ookla and OpenSignal dashboards, Interactive Maps, Activity Tracking, and other telco analytics dashboards used across 30+ regions in Indonesia. Also supported RTE 5G Insight, Smartcare SOC, 5G Auto Provisioning, LDAP authentication, Elasticsearch logging, and real-time network monitoring.",
     stack: [
       "ASP.NET Core",
       "NestJS",
       "C#",
       "TypeScript",
       "Keycloak",
+      "LDAP",
       "Elasticsearch",
-      "On Premise Servers",
     ],
   },
   {
@@ -52,22 +53,15 @@ export const EXPERIENCE = [
     type: "Freelance",
     title: "Backend Engineer",
     company: "PT. Partner Transformasi Informatika",
-    desc: "Spearheaded backend for Selatour, an Umrah travel platform. Built scalable APIs for admin management and mobile app. Delivered MVP in 2 months.",
-    stack: [
-      "NestJS",
-      "Bun",
-      "TypeScript",
-      "Supabase",
-      "Firebase",
-      "PostgreSQL",
-    ],
+    desc: "Architected and developed scalable backend APIs for the Selatour Umrah platform using Bun, NestJS, and Supabase Self Hosted. Delivered the platform MVP within 3 months, enabling admin management and mobile booking workflows.",
+    stack: ["NestJS", "Bun", "TypeScript", "Supabase Self Hosted"],
   },
   {
     period: "Oct 2023\nDec 2023",
     type: "Freelance",
     title: "Backend Engineer",
     company: "PT. Inti Teknologi Bersama",
-    desc: "Built core backend and database for blimobil.id, a vehicle trading and spare parts marketplace. Completed majority of MVP within 2 months.",
+    desc: "Directed backend architecture with NestJS and TypeScript through a modular service architecture. Implemented the core backend and database for blimobil.id, a vehicle trading and spare parts marketplace, completing the majority of the MVP within 2 months.",
     stack: ["NestJS", "TypeScript", "Digital Ocean", "Firebase", "PostgreSQL"],
   },
   {
@@ -75,7 +69,7 @@ export const EXPERIENCE = [
     type: "Full-time",
     title: "Backend Engineer",
     company: "KMPlus Consulting",
-    desc: "Orchestrated monolith-to-macroservices migration. Owned backend for a talent & learning platform with 2,000+ users. Built a Spotlight-like Search Engine Service.",
+    desc: "Improved scalability by separating backend functionality into independently managed macro services. Owned backend development for a talent and learning platform used by 2,000+ users, and engineered a Spotlight-like Search Engine Service with improved search response performance and indexing efficiency.",
     stack: [
       "NestJS",
       "Express.js",
@@ -91,23 +85,30 @@ export const EXPERIENCE = [
   {
     period: "Apr 2022\nJul 2022",
     type: "Internship",
-    title: "Backend Engineer Intern",
+    title: "Software Engineer Intern",
     company: "KMPlus Consulting",
-    desc: "Developed Repository Services and redesigned database schema for KMS Applications, improving media management and query performance.",
+    desc: "Developed Repository Services and redesigned the database schema for KMS Applications, reducing query overhead and improving media retrieval performance.",
     stack: ["Express.js", "Javascript", "TypeScript", "Node.js", "PostgreSQL"],
   },
 ];
 
+export const FREELANCE_EXPERIENCE = EXPERIENCE.filter((entry) => entry.type === "Freelance");
+export const EMPLOYMENT_EXPERIENCE = EXPERIENCE.filter((entry) => entry.type !== "Freelance");
+
 export const PROJECTS = [
   {
     name: "iNics — Healthcare SaaS Platform",
-    desc: "Multi-tenant platform for patient & hospital management with isolated tenant data, role-based access, and cloud-native deployment.",
-    stack: ["NestJS", "PostgreSQL", "neon.tech", "GCP"],
+    category: "Healthcare SaaS",
+    status: "Built",
+    desc: "Multi-tenant healthcare SaaS platform for hospital and patient management, with role-based access control and a scalable API architecture.",
+    stack: ["NestJS", "PostgreSQL", "GCP"],
   },
   {
-    name: "Taproost — Link-in-Bio Platform",
-    desc: "Customizable single-page link aggregator allowing users to create a branded landing page housing multiple links, with analytics tracking.",
-    stack: ["NestJS", "Bun", "PostgreSQL", "neon.tech"],
+    name: "Habit Tracker App",
+    category: "Systems / Rust",
+    status: "In development",
+    desc: "High-performance habit tracking backend focused on clean architecture, concurrency, and efficient data handling.",
+    stack: ["Rust", "Axum", "PostgreSQL"],
   },
 ];
 
@@ -126,3 +127,12 @@ export const CERTS = [
     name: "Certificate of Completion — Binar Academy (Kampus Merdeka Wave 2)",
   },
 ];
+
+export const NON_FORMAL_EDUCATION = {
+  title: "Backend Javascript Student",
+  school: "Binar Academy by Kampus Merdeka",
+  period: "Feb 2022 – Jul 2022",
+  meta: "Independent Study · GPA 4.6 / 5.0",
+  desc: "Built and deployed the backend for a second-hand marketplace platform with RESTful APIs, authentication, and profile management.",
+  stack: ["Node.js", "Express.js", "Sequelize", "PostgreSQL", "Heroku"],
+};

@@ -12,6 +12,9 @@ function App() {
 
   const [active, setActive] = useState(savedPanel)
   const [theme, setTheme]   = useState(savedTheme)
+  const [skillFilter, setSkillFilter] = useState('All skills')
+  const [selectedExperience, setSelectedExperience] = useState(0)
+  const [emailCopied, setEmailCopied] = useState(false)
 
   // Apply theme to <html>
   useEffect(() => {
@@ -38,6 +41,34 @@ function App() {
 
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
 
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText('arlinggacr.dev@gmail.com')
+    setEmailCopied(true)
+    window.setTimeout(() => setEmailCopied(false), 1800)
+  }
+
+  useEffect(() => {
+    const handleHash = () => {
+      const panel = window.location.hash.slice(1)
+      if (NAV.some((item) => item.id === panel)) setActive(panel)
+    }
+    handleHash()
+    window.addEventListener('hashchange', handleHash)
+    return () => window.removeEventListener('hashchange', handleHash)
+  }, [])
+
+  useEffect(() => {
+    if (window.matchMedia('(pointer: coarse)').matches) return
+
+    const handlePointerMove = (event) => {
+      document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`)
+      document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`)
+    }
+
+    window.addEventListener('pointermove', handlePointerMove)
+    return () => window.removeEventListener('pointermove', handlePointerMove)
+  }, [])
+
   return (
     <div className="shell">
       <Sidebar
@@ -45,12 +76,14 @@ function App() {
         setActive={setActive}
         theme={theme}
         onToggleTheme={toggleTheme}
+        emailCopied={emailCopied}
+        onCopyEmail={copyEmail}
       />
       <main className="main">
-        <div className={`panel${active === 'intro'      ? ' active' : ''}`}><IntroPanel /></div>
-        <div className={`panel${active === 'experience' ? ' active' : ''}`}><ExperiencePanel /></div>
-        <div className={`panel${active === 'projects'   ? ' active' : ''}`}><ProjectsPanel /></div>
-        <div className={`panel${active === 'education'  ? ' active' : ''}`}><EducationPanel /></div>
+        <div id="intro" className={`panel${active === 'intro'      ? ' active' : ''}`}><IntroPanel skillFilter={skillFilter} setSkillFilter={setSkillFilter} /></div>
+        <div id="experience" className={`panel${active === 'experience' ? ' active' : ''}`}><ExperiencePanel skillFilter={skillFilter} setSkillFilter={setSkillFilter} selectedExperience={selectedExperience} setSelectedExperience={setSelectedExperience} /></div>
+        <div id="projects" className={`panel${active === 'projects'   ? ' active' : ''}`}><ProjectsPanel skillFilter={skillFilter} setSkillFilter={setSkillFilter} /></div>
+        <div id="education" className={`panel${active === 'education'  ? ' active' : ''}`}><EducationPanel /></div>
       </main>
     </div>
   )
