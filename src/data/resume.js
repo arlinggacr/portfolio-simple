@@ -8,7 +8,17 @@ export const NAV = [
 export const SKILLS = [
   {
     cat: "Languages",
-    items: ["TypeScript", "JavaScript", "Go", "C#", "Java", "Python", "Rust"],
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "Bun",
+      "Deno",
+      "Go",
+      "C#",
+      "Java",
+      "Python",
+      "Rust",
+    ],
   },
   {
     cat: "Frameworks",
@@ -19,7 +29,6 @@ export const SKILLS = [
       "Spring Boot",
       "Fiber",
       "FastAPI",
-      "Axum & Tokio Environment",
     ],
   },
   { cat: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
@@ -54,7 +63,7 @@ export const EXPERIENCE = [
     title: "Backend Engineer",
     company: "PT. Partner Transformasi Informatika",
     desc: "Architected and developed scalable backend APIs for the Selatour Umrah platform using Bun, NestJS, and Supabase Self Hosted. Delivered the platform MVP within 3 months, enabling admin management and mobile booking workflows.",
-    stack: ["NestJS", "Bun", "TypeScript", "Supabase Self Hosted"],
+    stack: ["NestJS", "Bun", "TypeScript", "Docker", "Supabase Self Hosted"],
   },
   {
     period: "Oct 2023\nDec 2023",
@@ -92,8 +101,12 @@ export const EXPERIENCE = [
   },
 ];
 
-export const FREELANCE_EXPERIENCE = EXPERIENCE.filter((entry) => entry.type === "Freelance");
-export const EMPLOYMENT_EXPERIENCE = EXPERIENCE.filter((entry) => entry.type !== "Freelance");
+export const FREELANCE_EXPERIENCE = EXPERIENCE.filter(
+  (entry) => entry.type === "Freelance",
+);
+export const EMPLOYMENT_EXPERIENCE = EXPERIENCE.filter(
+  (entry) => entry.type !== "Freelance",
+);
 
 export const PROJECTS = [
   {
