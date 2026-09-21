@@ -1,4 +1,5 @@
 import { SKILLS } from "../../data/resume";
+import resumePdf from "../../cv/resume.pdf";
 
 export default function IntroPanel({ skillFilter, setSkillFilter }) {
   return (
@@ -24,7 +25,7 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
       </div>
       <a
         className="cv-link"
-        href="/src/cv/resume.pdf"
+        href={resumePdf}
         download="Arlingga Cahya Ramdhana_Resume.pdf"
       >
         <span>Download CV</span>
