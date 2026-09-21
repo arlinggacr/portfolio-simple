@@ -26,7 +26,7 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
       <a
         className="cv-link"
         href={resumePdf}
-        download="Arlingga Cahya Ramdhana_Resume.pdf"
+        download="Arlingga_Cahya_Ramdhana_Resume.pdf"
       >
         <span>Download CV</span>
         <span className="cv-arrow" aria-hidden="true">
