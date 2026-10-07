@@ -194,20 +194,23 @@ button { font: inherit; }
 }
 
 /* ── MAIN ────────────────────────────────── */
-.main { flex: 1; height: 100%; overflow: hidden; position: relative; }
+.main { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; scroll-snap-type: y mandatory; scroll-behavior: smooth; }
 .main::after { content: ''; position: absolute; width: 38vw; height: 38vw; max-width: 560px; max-height: 560px; right: -12vw; top: 12%; border: 1px solid var(--border); border-radius: 50%; opacity: .55; pointer-events: none; box-shadow: 0 0 0 34px color-mix(in srgb, var(--border) 28%, transparent), 0 0 0 68px color-mix(in srgb, var(--border) 14%, transparent); }
 
 .panel {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  min-height: 100%;
+  flex: 0 0 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 34px 6vw;
-  opacity: 0;
-  transform: translateX(18px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  opacity: 1;
+  transform: none;
   transition: opacity 0.32s ease, transform 0.32s ease;
-  pointer-events: none;
+  pointer-events: auto;
 }
 .panel.active {
   opacity: 1;
@@ -440,19 +443,6 @@ button { font: inherit; }
   0%, 100% { opacity: 1; box-shadow: 0 0 0 4px var(--accent-l); }
   50% { opacity: .35; box-shadow: 0 0 0 7px transparent; }
 }
-.panel.active .eyebrow            { animation: fadeUp 0.42s 0.06s both; }
-.panel.active .intro-headline     { animation: fadeUp 0.42s 0.13s both; }
-.panel.active .intro-body         { animation: fadeUp 0.42s 0.20s both; }
-.panel.active .skill-groups       { animation: fadeUp 0.42s 0.27s both; }
-.panel.active .tl-item:nth-child(1) { animation: fadeUp 0.38s 0.11s both; }
-.panel.active .tl-item:nth-child(2) { animation: fadeUp 0.38s 0.18s both; }
-.panel.active .tl-item:nth-child(3) { animation: fadeUp 0.38s 0.25s both; }
-.panel.active .tl-item:nth-child(4) { animation: fadeUp 0.38s 0.32s both; }
-.panel.active .tl-item:nth-child(5), .panel.active .tl-item:nth-child(6) { animation: fadeUp 0.38s 0.39s both; }
-.panel.active .proj-item:nth-child(1) { animation: fadeUp 0.38s 0.11s both; }
-.panel.active .proj-item:nth-child(2) { animation: fadeUp 0.38s 0.18s both; }
-.panel.active .edu-block  { animation: fadeUp 0.38s 0.11s both; }
-.panel.active .cert-list  { animation: fadeUp 0.38s 0.20s both; }
 
 /* ════════════════════════════════════════════
    RESPONSIVE
@@ -507,8 +497,8 @@ button { font: inherit; }
   .theme-toggle { margin-top: 0; padding-top: 0; border-top: none; flex-shrink: 0; }
   .toggle-label { display: none; }
 
-  .main { height: auto; flex: 1; overflow: hidden; min-height: 0; }
-  .panel { padding: 30px 32px; overflow-y: auto; align-items: flex-start; }
+  .main { height: auto; flex: 1; overflow-y: auto; min-height: 0; }
+  .panel { padding: 30px 32px; align-items: flex-start; }
   .exp-content { padding-top: 0; }
   .main::after { width: 70vw; height: 70vw; right: -30vw; top: 20%; }
 }
