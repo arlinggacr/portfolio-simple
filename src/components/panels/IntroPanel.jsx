@@ -1,5 +1,5 @@
-import { SKILLS } from "../../data/resume";
 import resumePdf from "../../cv/resume.pdf";
+import { SKILLS } from "../../data/resume";
 
 export default function IntroPanel({ skillFilter, setSkillFilter }) {
   return (
@@ -8,16 +8,15 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
         SOFTWARE ENGINEER <span>///</span> JAKARTA
       </div>
       <h1 className="intro-headline">
-        Building the systems behind
+        Architecting the backend behind
         <br />
         <strong>better products.</strong>
       </h1>
       <p className="intro-body">
-        4+ years building scalable backend systems and APIs with NestJS, ASP.NET
-        Core, Spring Boot, and Go, also On Learning with Rust. Experienced in
-        DDD, CQRS, and event-driven architecture across telco, cloud, ERP, and
-        SaaS domains. My main focus is backend engineering, with a software
-        engineer's view of the products and teams those systems support.
+        Hi, I'm Arlingga. I build scalable backend systems and high-performance
+        APIs. With 4+ years of experience across Node.js / Bun, .NET, Go and you
+        name it, I architect robust digital solutions for telco, cloud, and SaaS
+        products.
       </p>
       <div className="intro-status">
         <span className="status-dot" />
@@ -34,13 +33,26 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
         </span>
       </a>
       <div className="intro-actions">
-        <a className="secondary-link" href="#projects">Explore projects <span aria-hidden="true">↗</span></a>
-        <a className="secondary-link" href="mailto:arlinggacr.dev@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
+        <a className="secondary-link" href="#projects">
+          Explore projects <span aria-hidden="true">↗</span>
+        </a>
+        <a className="secondary-link" href="mailto:arlinggacr.dev@gmail.com">
+          Start a conversation <span aria-hidden="true">↗</span>
+        </a>
       </div>
       <div className="profile-stats" aria-label="Profile highlights">
-        <div className="profile-stat"><strong>4+</strong><span>years building</span></div>
-        <div className="profile-stat"><strong>30+</strong><span>regions supported</span></div>
-        <div className="profile-stat"><strong>API</strong><span>backend focus</span></div>
+        <div className="profile-stat">
+          <strong>4+</strong>
+          <span>years building</span>
+        </div>
+        <div className="profile-stat">
+          <strong>30+</strong>
+          <span>regions supported</span>
+        </div>
+        <div className="profile-stat">
+          <strong>API</strong>
+          <span>backend focus</span>
+        </div>
       </div>
       <div className="skill-groups">
         {SKILLS.map((g) => (
@@ -48,7 +60,14 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
             <span className="skill-cat">{g.cat}</span>
             <div className="skill-pills">
               {g.items.map((item) => (
-                <button className={`pill${skillFilter === item ? ' selected' : ''}`} key={item} type="button" onClick={() => setSkillFilter(skillFilter === item ? 'All skills' : item)}>
+                <button
+                  className={`pill${skillFilter === item ? " selected" : ""}`}
+                  key={item}
+                  type="button"
+                  onClick={() =>
+                    setSkillFilter(skillFilter === item ? "All skills" : item)
+                  }
+                >
                   {item}
                 </button>
               ))}
