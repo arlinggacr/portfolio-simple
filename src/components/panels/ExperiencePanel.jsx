@@ -27,13 +27,15 @@ export default function ExperiencePanel({ skillFilter, setSkillFilter, selectedE
   return (
     <div className="exp-content">
       <div className="eyebrow">PROFESSIONAL EXPERIENCE</div>
+       <div className="experience-group">
+         <div className="experience-group-title">Employment</div>
+         <div className="timeline">{renderTimeline(EMPLOYMENT_EXPERIENCE)}</div>
+         {EMPLOYMENT_EXPERIENCE.every((entry) => skillFilter !== 'All skills' && !entry.stack.includes(skillFilter)) && <div className="empty-state">No employment entry uses <strong>{skillFilter}</strong>.</div>}
+       </div>
       <div className="experience-group">
-        <div className="experience-group-title">Employment</div>
-        <div className="timeline">{renderTimeline(EMPLOYMENT_EXPERIENCE)}</div>
-      </div>
-      <div className="experience-group">
-        <div className="experience-group-title">Freelance</div>
-        <div className="timeline">{renderTimeline(FREELANCE_EXPERIENCE)}</div>
+         <div className="experience-group-title">Freelance</div>
+         <div className="timeline">{renderTimeline(FREELANCE_EXPERIENCE)}</div>
+         {FREELANCE_EXPERIENCE.every((entry) => skillFilter !== 'All skills' && !entry.stack.includes(skillFilter)) && <div className="empty-state">No freelance entry uses <strong>{skillFilter}</strong>.</div>}
       </div>
     </div>
   )

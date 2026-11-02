@@ -21,13 +21,14 @@ export default function ProjectsPanel({ skillFilter, setSkillFilter }) {
             </div>
             <div className="proj-desc">{p.desc}</div>
             <div className="proj-stack">
-              {p.stack.map((s) => (
-                <span className="sp" key={s}>{s}</span>
-              ))}
+                {p.stack.map((s) => (
+                  <button className={`sp${skillFilter === s ? ' selected' : ''}`} type="button" key={s} onClick={() => setSkillFilter(skillFilter === s ? 'All skills' : s)}>{s}</button>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
+      {!visibleProjects.length && <div className="empty-state">No projects use <strong>{skillFilter}</strong> yet. Clear the filter to view all projects.</div>}
     </div>
   )
 }

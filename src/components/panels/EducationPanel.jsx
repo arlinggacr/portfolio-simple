@@ -1,13 +1,13 @@
-import { CERTS, NON_FORMAL_EDUCATION } from '../../data/resume'
+import { CERTS, FORMAL_EDUCATION, NON_FORMAL_EDUCATION } from '../../data/resume'
 
 export default function EducationPanel() {
   return (
     <div className="edu-content">
       <div className="eyebrow">EDUCATION & CERTIFICATIONS</div>
       <div className="edu-block">
-        <div className="edu-degree">S1 Informatics Engineering</div>
-        <div className="edu-school">University of Muhammadiyah Prof. Dr. Hamka</div>
-        <div className="edu-meta">2019 – 2023 · GPA 3.69 / 4.00</div>
+        <div className="edu-degree">{FORMAL_EDUCATION.title}</div>
+        <div className="edu-school">{FORMAL_EDUCATION.school}</div>
+        <div className="edu-meta">{FORMAL_EDUCATION.period} · {FORMAL_EDUCATION.meta}</div>
       </div>
       <div className="edu-block edu-non-formal">
         <div className="edu-section-label">NON-FORMAL EDUCATION</div>

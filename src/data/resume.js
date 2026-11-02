@@ -8,35 +8,46 @@ export const NAV = [
 export const SKILLS = [
   {
     cat: "Languages",
-    items: [
-      "TypeScript",
-      "JavaScript",
-      "Bun",
-      "Deno",
-      "Go",
-      "C#",
-      "Java",
-      "Python",
-      "Rust",
-    ],
+    items: ["TypeScript", "JavaScript", "C#", "Java", "Go"],
   },
   {
-    cat: "Frameworks",
+    cat: "Frameworks & Runtimes",
     items: [
-      "ASP.NET Core",
+      "Node.js",
+      "Bun",
       "NestJS",
       "Express.js",
+      "ASP.NET Core",
       "Spring Boot",
-      "Fiber",
-      "FastAPI",
+      "Go Fiber",
     ],
   },
-  { cat: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
   {
-    cat: "Cloud/DevOps",
-    items: ["GCP", "Docker", "Kubernetes", "RabbitMQ", "Git"],
+    cat: "Databases",
+    items: ["PostgreSQL", "MySQL", "Clickhouse", "MongoDB"],
   },
-  { cat: "Auth", items: ["Keycloak", "OAuth2", "JWT"] },
+  {
+    cat: "Messaging & Caching",
+    items: ["Redis", "RabbitMQ", "Firebase Cloud Messaging"],
+  },
+  {
+    cat: "Auth & Security",
+    items: ["Keycloak", "LDAP", "OAuth2", "JWT"],
+  },
+  {
+    cat: "Infrastructure & DevOps",
+    items: ["GCP", "Docker", "Kubernetes", "GitHub Actions", "GitLab CI"],
+  },
+  {
+    cat: "Architecture & Patterns",
+    items: [
+      "Macro-services",
+      "Event-Driven Architecture",
+      "Domain-Driven Design (DDD)",
+      "CQRS",
+      "RESTful APIs",
+    ],
+  },
 ];
 
 export const EXPERIENCE = [
@@ -46,15 +57,15 @@ export const EXPERIENCE = [
     current: true,
     title: "Backend Engineer",
     company: "PT. Neural Technologies Indonesia",
-    desc: "Led backend architecture for Phase 2 of the Benchmark Solution Service, managing 2 backend engineers and mentoring 4 interns. Built APIs for Ookla and OpenSignal dashboards, Interactive Maps, Activity Tracking, and other telco analytics dashboards used across 30+ regions in Indonesia. Also supported RTE 5G Insight, Smartcare SOC, 5G Auto Provisioning, LDAP authentication, Elasticsearch logging, and real-time network monitoring.",
+    desc: "Led the backend architecture and delivery for 3 phases of the Benchmark Solution Service, managing 2 engineers and 4 interns, and engineering core APIs powering 7+ enterprise dashboards across 30+ regions. Architected a comprehensive User Access Management (UAM) service integrated with Apache Superset and Keycloak, and independently managed Nginx reverse proxy deployment pipelines. Led the migration of the Open Signal Winning Benchmark service from Node.js to .NET 8, optimizing FBB data aggregation and reducing API latency from 10s to 0.5s. Developed core backend services for RTE 5G Insight and SOC Smartcare for real-time network monitoring.",
     stack: [
-      "ASP.NET Core",
-      "NestJS",
       "C#",
-      "TypeScript",
-      "Keycloak",
-      "LDAP",
+      "ASP.NET Core",
+      "Node.js",
+      "PostgreSQL",
       "Elasticsearch",
+      "Keycloak",
+      "Nginx",
     ],
   },
   {
@@ -62,42 +73,51 @@ export const EXPERIENCE = [
     type: "Freelance",
     title: "Backend Engineer",
     company: "PT. Partner Transformasi Informatika",
-    desc: "Architected and developed scalable backend APIs for the Selatour Umrah platform using Bun, NestJS, and Supabase Self Hosted. Delivered the platform MVP within 3 months, enabling admin management and mobile booking workflows.",
-    stack: ["NestJS", "Bun", "TypeScript", "Docker", "Supabase Self Hosted"],
+    desc: "Architected and developed robust backend APIs for the Selatour Umrah platform using Bun, NestJS, and Supabase Self-Hosted. Delivered the platform MVP within a strict 4-month timeline, enabling comprehensive admin management and seamless mobile booking workflows.",
+    stack: [
+      "Bun",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Supabase Self-Hosted",
+    ],
   },
   {
     period: "Oct 2023\nDec 2023",
     type: "Freelance",
     title: "Backend Engineer",
     company: "PT. Inti Teknologi Bersama",
-    desc: "Directed backend architecture with NestJS and TypeScript through a modular service architecture. Implemented the core backend and database for blimobil.id, a vehicle trading and spare parts marketplace, completing the majority of the MVP within 2 months.",
-    stack: ["NestJS", "TypeScript", "Digital Ocean", "Firebase", "PostgreSQL"],
+    desc: "Directed the backend architecture using NestJS and TypeScript, reducing system complexity and improving team development efficiency through a modular service architecture. Implemented the core backend engine and relational database for a vehicle trading and spare parts marketplace (blimobil.id), completing the MVP within 2 months.",
+    stack: [
+      "NestJS",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Modular Architecture",
+    ],
   },
   {
     period: "Jul 2022\nOct 2023",
     type: "Full-time",
     title: "Backend Engineer",
     company: "KMPlus Consulting",
-    desc: "Improved scalability by separating backend functionality into independently managed macro services. Owned backend development for a talent and learning platform used by 2,000+ users, and engineered a Spotlight-like Search Engine Service with improved search response performance and indexing efficiency.",
+    desc: "Engineered the backend architecture for a Spotlight-like Search Engine Service using NestJS and TypeScript, enhancing search response performance and indexing efficiency. Improved scalability by decoupling monolithic backend functionality into independently managed macro-service modules. Owned end-to-end backend development for a talent and learning management platform serving 2,000+ active users.",
     stack: [
       "NestJS",
-      "Express.js",
-      "Javascript",
       "TypeScript",
-      "Macroservices",
-      "Redis",
-      "Digital Ocean",
-      "Firebase",
-      "PostgreSQL",
+      "Express.js",
+      "JavaScript",
+      "MySQL",
+      "Macro-services",
     ],
   },
   {
     period: "Apr 2022\nJul 2022",
     type: "Internship",
-    title: "Software Engineer Intern",
+    title: "Backend Engineer Intern",
     company: "KMPlus Consulting",
-    desc: "Developed Repository Services and redesigned the database schema for KMS Applications, reducing query overhead and improving media retrieval performance.",
-    stack: ["Express.js", "Javascript", "TypeScript", "Node.js", "PostgreSQL"],
+    desc: "Developed Repository Services and redesigned the database schema for Knowledge Management System (KMS) applications. Minimized database query overhead and improved media retrieval performance through schema optimization and efficient data querying techniques.",
+    stack: ["Express.js", "JavaScript", "TypeScript", "Node.js", "PostgreSQL"],
   },
 ];
 
@@ -110,34 +130,77 @@ export const EMPLOYMENT_EXPERIENCE = EXPERIENCE.filter(
 
 export const PROJECTS = [
   {
-    name: "iNics — Healthcare SaaS Platform",
-    category: "Healthcare SaaS",
-    status: "Built",
-    desc: "Multi-tenant healthcare SaaS platform for hospital and patient management, with role-based access control and a scalable API architecture.",
-    stack: ["NestJS", "PostgreSQL", "GCP"],
+    name: "Benchmark Solution Service (PT. Neural Technologies)",
+    category: "Telco Analytics",
+    status: "Deployed",
+    desc: "Architected the core backend and centralized User Access Management (UAM) for an enterprise telco analytics suite. Led the system migration from Node.js to .NET 8, reducing API latency from 10s to 0.5s. Engineered the Phase 3 Seamless Analysis module to track user transition patterns between mobile and fixed-line networks.",
+    stack: [
+      "C#",
+      "ASP.NET Core",
+      "Elasticsearch",
+      "PostgreSQL",
+      "RESTful APIs",
+      "Telco Analytics",
+    ],
   },
   {
-    name: "Habit Tracker App",
-    category: "Systems / Rust",
-    status: "In development",
-    desc: "High-performance habit tracking backend focused on clean architecture, concurrency, and efficient data handling.",
-    stack: ["Rust", "Axum", "PostgreSQL"],
+    name: "Portaverse Platform (KMPlus Consulting)",
+    category: "Learning Management System (LMS)",
+    status: "Deployed",
+    desc: "Architected an Enterprise Learning Management System (LMS) from scratch, designing database structures to support video progress tracking and gamification. Engineered a 360-Degree Talent Assessment backend and resolved architectural edge cases involving asynchronous evaluation timelines.",
+    stack: [
+      "TypeScript",
+      "NestJS",
+      "Express.js",
+      "JavaScript",
+      "MySQL",
+      "RESTful APIs",
+    ],
+  },
+  {
+    name: "Selatour Umrah Platform",
+    category: "Travel & Booking",
+    status: "MVP Delivered",
+    desc: "Architected and developed robust backend APIs to support complex admin management and seamless mobile booking workflows. Delivered the platform MVP within a strict 3-month timeline.",
+    stack: [
+      "Bun",
+      "NestJS",
+      "PostgreSQL",
+      "Self-hosted Supabase",
+      "RESTful APIs",
+    ],
+  },
+  {
+    name: "blimobil.id Vehicle Marketplace",
+    category: "E-Commerce / Marketplace",
+    status: "MVP Delivered",
+    desc: "Directed the core backend architecture for a comprehensive vehicle trading and spare parts marketplace. Accelerated product delivery by building the core backend engine and relational database schema within 2 months.",
+    stack: [
+      "Node.js",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Modular Architecture",
+    ],
   },
 ];
 
 export const CERTS = [
   {
     year: "2024",
-    name: "Problem Solving (Intermediate), REST API (Intermediate), C# (Basic) — HackerRank",
-  },
-  { year: "2023", name: "SQL (Intermediate) — HackerRank" },
-  {
-    year: "2022",
-    name: "SQL, JavaScript, Python, Problem Solving (Basic) — HackerRank",
+    name: "Problem Solving and REST API (Intermediate), C# (Basic) — HackerRank",
   },
   {
+    year: "2023",
+    name: "SQL (Intermediate) — HackerRank",
+  },
+  {
     year: "2022",
-    name: "Certificate of Completion — Binar Academy (Kampus Merdeka Wave 2)",
+    name: "SQL, JavaScript, Python and Problem Solving (Basic) — HackerRank",
+  },
+  {
+    year: "2022",
+    name: "Certificate of Completion and Assessment, Kampus Merdeka Program — Binar Academy Wave 2",
   },
 ];
 
@@ -145,7 +208,14 @@ export const NON_FORMAL_EDUCATION = {
   title: "Backend Javascript Student",
   school: "Binar Academy by Kampus Merdeka",
   period: "Feb 2022 – Jul 2022",
-  meta: "Independent Study · GPA 4.6 / 5.0",
-  desc: "Built and deployed the backend for a second-hand marketplace platform with RESTful APIs, authentication, and profile management.",
+  meta: "Independent Study · GPA 4.6/5.0",
+  desc: "Built and deployed the backend for a second-hand marketplace platform with RESTful APIs, authentication and profile management using Node.js, Express.js, Sequelize and PostgreSQL, deployed on Heroku.",
   stack: ["Node.js", "Express.js", "Sequelize", "PostgreSQL", "Heroku"],
+};
+
+export const FORMAL_EDUCATION = {
+  title: "Bachelor of Engineering in Software Engineering",
+  school: "University of Muhammadiyah Prof. Dr. Hamka",
+  period: "2019 – 2023",
+  meta: "GPA 3.69 / 4.00",
 };

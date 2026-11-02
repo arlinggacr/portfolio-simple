@@ -1,4 +1,4 @@
-import resumePdf from "../../cv/resume.pdf";
+import resumePdf from "../../cv/my_resume.pdf";
 import { SKILLS } from "../../data/resume";
 
 export default function IntroPanel({ skillFilter, setSkillFilter }) {
@@ -13,10 +13,11 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
         <strong>better products.</strong>
       </h1>
       <p className="intro-body">
-        Hi, I'm Arlingga. I build scalable backend systems and high-performance
-        APIs. With 4+ years of experience across Node.js / Bun, .NET, Go and you
-        name it, I architect robust digital solutions for telco, cloud, and SaaS
-        products.
+        Hi, I'm Arlingga, a Backend Engineer specializing in distributed systems
+        and scalable architecture. Driven by clean architecture and
+        Domain-Driven Design, I leverage TypeScript, Go, and ASP.NET Core to
+        build highly resilient backend engines for complex telco analytics and
+        enterprise SaaS platforms."
       </p>
       <div className="intro-status">
         <span className="status-dot" />
