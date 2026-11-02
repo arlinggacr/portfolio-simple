@@ -373,7 +373,7 @@ a { -webkit-tap-highlight-color: transparent; }
   letter-spacing: 0.04em;
   opacity: 0.75;
 }
-.tl-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.tl-badges { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .tl-current { display: inline-block; font-family: var(--font-mono); font-size: 8px; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; }
 
 .tl-right { flex: 1; min-width: 0; }
