@@ -9,8 +9,7 @@ export default function IntroPanel({ skillFilter, setSkillFilter }) {
       </div>
       <h1 className="intro-headline">
         Architecting the backend behind
-        <br />
-        <strong>better products.</strong>
+        <strong>a better products.</strong>
       </h1>
       <p className="intro-body">
         Hi, I'm Arlingga, a Backend Engineer specializing in distributed systems
