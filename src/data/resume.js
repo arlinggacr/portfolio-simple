@@ -145,7 +145,7 @@ export const PROJECTS = [
   },
   {
     name: "Portaverse Platform (KMPlus Consulting)",
-    category: "Learning Management System (LMS)",
+    category: "Learning & Talent Management System",
     status: "Deployed",
     desc: "Architected an Enterprise Learning Management System (LMS) from scratch, designing database structures to support video progress tracking and gamification. Engineered a 360-Degree Talent Assessment backend and resolved architectural edge cases involving asynchronous evaluation timelines.",
     stack: [
