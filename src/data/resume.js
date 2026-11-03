@@ -71,7 +71,7 @@ export const EXPERIENCE = [
   {
     period: "Nov 2025\nMar 2026",
     type: "Freelance",
-    title: "Backend Engineer",
+    title: "Freelance Backend Engineer",
     company: "PT. Partner Transformasi Informatika",
     desc: "Architected and developed robust backend APIs for the Selatour Umrah platform using Bun, NestJS, and Supabase Self-Hosted. Delivered the platform MVP within a strict 4-month timeline, enabling comprehensive admin management and seamless mobile booking workflows.",
     stack: [
@@ -85,7 +85,7 @@ export const EXPERIENCE = [
   {
     period: "Oct 2023\nDec 2023",
     type: "Freelance",
-    title: "Backend Engineer",
+    title: "Freelance Backend Engineer",
     company: "PT. Inti Teknologi Bersama",
     desc: "Directed the backend architecture using NestJS and TypeScript, reducing system complexity and improving team development efficiency through a modular service architecture. Implemented the core backend engine and relational database for a vehicle trading and spare parts marketplace (blimobil.id), completing the MVP within 2 months.",
     stack: [
